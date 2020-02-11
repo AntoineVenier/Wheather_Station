@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp
+"porjet_capteur_meteo\startup_stm32f407xx.o"
+"porjet_capteur_meteo\main.o"
+"porjet_capteur_meteo\stm32f4xx_it.o"
+"porjet_capteur_meteo\stm32f4xx_hal_msp.o"
+"porjet_capteur_meteo\stm32f4xx_hal_i2c.o"
+"porjet_capteur_meteo\stm32f4xx_hal_i2c_ex.o"
+"porjet_capteur_meteo\stm32f4xx_hal_rcc.o"
+"porjet_capteur_meteo\stm32f4xx_hal_rcc_ex.o"
+"porjet_capteur_meteo\stm32f4xx_hal_flash.o"
+"porjet_capteur_meteo\stm32f4xx_hal_flash_ex.o"
+"porjet_capteur_meteo\stm32f4xx_hal_flash_ramfunc.o"
+"porjet_capteur_meteo\stm32f4xx_hal_gpio.o"
+"porjet_capteur_meteo\stm32f4xx_hal_dma_ex.o"
+"porjet_capteur_meteo\stm32f4xx_hal_dma.o"
+"porjet_capteur_meteo\stm32f4xx_hal_pwr.o"
+"porjet_capteur_meteo\stm32f4xx_hal_pwr_ex.o"
+"porjet_capteur_meteo\stm32f4xx_hal_cortex.o"
+"porjet_capteur_meteo\stm32f4xx_hal.o"
+"porjet_capteur_meteo\stm32f4xx_hal_exti.o"
+"porjet_capteur_meteo\stm32f4xx_hal_tim.o"
+"porjet_capteur_meteo\stm32f4xx_hal_tim_ex.o"
+"porjet_capteur_meteo\stm32f4xx_hal_uart.o"
+"porjet_capteur_meteo\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "Porjet_capteur_meteo\Porjet_capteur_meteo.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Porjet_capteur_meteo.map" -o Porjet_capteur_meteo\Porjet_capteur_meteo.axf
