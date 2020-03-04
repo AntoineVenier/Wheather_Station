@@ -7,9 +7,9 @@ class SensorInterface(QObject):
         super().__init__()
         self.sensor = Sensor()
         self.time_refresh = 1000 # Time between value refresh in milliseconds
-        self.timer = Qtimer(interval=self.time_refresh)
-        self.timer.timeout.connect(self.sensor.refresh_data)
-        self.timer.start()
+        #self.timer = Qtimer(interval=self.time_refresh)
+        #self.timer.timeout.connect(self.sensor.refresh_data)
+        #self.timer.start()
 
     @Signal
     def temperature_changed(self):
@@ -35,5 +35,3 @@ class SensorInterface(QObject):
     temperature = Property(float, get_temperature, notify=temperature_changed)
     pressure = Property(float, get_pressure, notify = pressure_changed)
     humidity = Property(float, get_humidity, notify = humidity_changed)
-
-
