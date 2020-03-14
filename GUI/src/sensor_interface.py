@@ -1,8 +1,8 @@
 from PySide2.QtCore import Slot, QObject, Signal, Property, QTimer, QThread, SIGNAL
 from sensor import *
 
-class SensorInterface(QObject):
 
+class SensorInterface(QObject):
     def __init__(self):
         super().__init__()
         self.sensor = Sensor()
@@ -36,5 +36,5 @@ class SensorInterface(QObject):
         self.pressure_changed.emit()
 
     temperature = Property(float, get_temperature, notify=temperature_changed)
-    pressure = Property(float, get_pressure, notify = pressure_changed)
-    humidity = Property(float, get_humidity, notify = humidity_changed)
+    pressure = Property(float, get_pressure, notify=pressure_changed)
+    humidity = Property(float, get_humidity, notify=humidity_changed)
