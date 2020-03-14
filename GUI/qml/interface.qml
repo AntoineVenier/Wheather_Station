@@ -9,6 +9,15 @@ ApplicationWindow {
     height: 550
     width: 850
 
+    Timer {
+        interval: 1500
+        running: true
+        repeat: true
+        onTriggered: {
+            sensor.refresh()
+        }
+    }
+
     ColumnLayout {
         id: mainLayout
         anchors.fill: parent
@@ -69,7 +78,7 @@ ApplicationWindow {
                 Layout.rightMargin: 25
                 text: sensor.pressure + " hPa"
                 font.weight: Font.DemiBold
-                font.pointSize: 20
+                font.pointSize: 15
                 color: "darkgrey"
             }
         }
